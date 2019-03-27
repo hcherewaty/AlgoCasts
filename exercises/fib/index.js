@@ -8,6 +8,19 @@
 // Example:
 //   fib(4) === 3
 
-function fib(n) {}
+function fib(n) {
+    let result = [0, 1]; //need the 0 and 1 to start the sequence and we know it starts that way.
+
+    //starting at index 2 to n
+    for(let i = 2; i <= n; i++){
+        let a = result[i - 1];
+        let b = result[i -2];
+
+        result.push(a + b);
+    }
+    return result[n];
+}
+
+
 
 module.exports = fib;

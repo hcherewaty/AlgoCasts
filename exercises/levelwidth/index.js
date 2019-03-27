@@ -12,7 +12,23 @@
 // Answer: [1, 3, 2]
 
 function levelWidth(root) {
-    
+    let arr = [root, 'x'];
+    let widths = [0];
+
+    while(arr.length > 1) {
+        let node = arr.shift();
+        if(node === 'x'){
+            widths.push(0);
+            arr.push('x');
+        } else {
+            if(node.left) { arr.push(node.left); }
+            if(node.right) { arr.push(node.right); }
+
+            widths[widths.length - 1]++;
+        }
+    }
+
+    return widths;
 }
 
 module.exports = levelWidth;

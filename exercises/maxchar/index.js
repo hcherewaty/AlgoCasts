@@ -27,7 +27,7 @@ function maxChar(str) {
         for(let i = 0; i < newStr.length; i++){
             //if newStr[i] is not contained within charMap object, then add it and set it's value = 1.
             if(!charMap[newStr[i]]){
-                charMap[newStr[i]] = charMap[newStr[i]] = 1;
+                charMap[newStr[i]] = 1;
             } else {
                 //otherwise, it's already in charMap and increment the charMap[newStr[i]]'s value by 1.
                 charMap[newStr[i]]++;

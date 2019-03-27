@@ -34,4 +34,17 @@ function circular(list) {
     return false;
 }
 
+// function circular(list) {
+
+//     let current = list.head;
+
+//     while(current){
+//         if(!current.next){
+//             return false;
+//         }
+//         current = current.next;
+//     }
+//     return true;
+// }
+
 module.exports = circular;
